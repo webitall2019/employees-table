@@ -1,0 +1,25 @@
+.form__wrap{
+    padding: 120px;
+    width: 80%;
+    background-color: #fff;
+    h1{
+        text-align: center;
+    }
+}
+.form__group{
+    display: flex;
+    max-width: 60%;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    height: 100%;
+    input, select{
+       
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    @media screen and (max-width: 500px) {
+        max-width: initial;
+    }
+}

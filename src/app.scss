@@ -1,0 +1,44 @@
+.app{
+    padding-top: 20px;
+    .container{
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    &__add-user{
+        display: flex;
+        margin-left: auto;
+        margin-bottom: 20px;
+        padding: 5px 10px;
+        background-color: aquamarine;
+        outline: none;
+        border-radius: 3px;
+       
+        
+    }
+    button{
+        cursor: pointer;
+        padding: 5px 10px;
+        outline: none;
+        background-color: aquamarine;
+        border: 1px solid #7d7d7d;
+        transition: ease .3s;
+        &:hover{
+            transform: translateY(-3px);
+            border-radius: 5px;
+        }
+    }
+    input{
+        padding: 5px;
+    }
+}
+.charts{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   .chart{
+        max-width: 400px;
+   }
+   @media screen  and (max-width: 768.1px){
+       justify-content: center;
+   }
+}

@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import store from "./store/store";
+import "./index.css";
+import App from "./App";
+const state = store.getState();
+console.log(state);
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Provider>,
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// если спросят почему через хук и зачем вызываю в конкретной компоненте, Решил не вызывать хук в индексе,
+// чтобы при  отобр другой комп который не испл данные из хука юзеГетЮзерс, что бы эти даннные там не грузились
+// там где нам нужны эти данные, там мы вызовем этот хук
+// этим мы избежим загрузки данных и обращение к апи если будем ее испл внутри индекса или

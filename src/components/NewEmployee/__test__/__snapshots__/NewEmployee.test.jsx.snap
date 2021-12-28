@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NewEmployee/> component should match snapshot WHEN rendered 1`] = `
+<DocumentFragment>
+  <div
+    class="form__wrap"
+  >
+    <h1>
+      Become one of the team
+    </h1>
+    <form>
+      <div
+        class="form__group"
+      >
+        <input
+          data-testid="userName"
+          id="name"
+          name="name"
+          placeholder="your name"
+          required=""
+          type="text"
+          value=""
+        />
+        <input
+          data-testid="userAge"
+          name="tenure"
+          placeholder="your age"
+          required=""
+          type="number"
+          value=""
+        />
+        <select
+          data-testid="jobTitle"
+          name="jobTitle"
+          required=""
+        >
+          <option
+            value="CEO"
+          >
+            CEO
+          </option>
+          <option
+            value="Developer"
+          >
+            Developer
+          </option>
+          <option
+            value="Marketing Specialist"
+          >
+            Marketing Specialist
+          </option>
+          <option
+            value="CFO"
+          >
+            CFO
+          </option>
+          <option
+            value="QA"
+          >
+            QA
+          </option>
+        </select>
+        <select
+          data-testid="gender"
+          name="gender"
+          required=""
+        >
+          <option
+            value="Male"
+          >
+            Male
+          </option>
+          <option
+            value="Female"
+          >
+            Female
+          </option>
+        </select>
+        <button
+          type="submit"
+        >
+          submit
+        </button>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
