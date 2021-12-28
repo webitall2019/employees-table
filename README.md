@@ -1,4 +1,4 @@
-For correct workб  employee.json file should be in public/app folder
+For correct work application, employee.json file should be in public/app folder
 
 In the project I used lodash, although it is redundant for this project, I want to show that I can use, and it's 
 have  more elegant way of getting data in my opinion.
