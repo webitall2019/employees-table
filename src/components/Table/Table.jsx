@@ -7,7 +7,7 @@ import "./table.scss";
 
 const Table = () => {
   useGetData("./api/employees.json");
-  const users = useSelector((state) => state);
+  const users = useSelector((state) => state.users);
   const titles = get(users, [0], []);
 
   const titlesRender = (titles) => {
@@ -22,7 +22,9 @@ const Table = () => {
   return (
     <div className="table">
       <div className="table__header">
-        <div className="row" data-testid="titleRender">{titlesRender(titles)}</div>
+        <div className="row" data-testid="titleRender">
+          {titlesRender(titles)}
+        </div>
       </div>
       <div className="table__body">
         {map(users, (el, index) => {

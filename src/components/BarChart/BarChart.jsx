@@ -5,7 +5,7 @@ import { Bar } from "react-chartjs-2";
 import { useSelector } from "react-redux";
 
 const BarChart = () => {
-  const users = useSelector((state) => state);
+  const users = useSelector((state) => state.users);
 
   const sex = [];
 

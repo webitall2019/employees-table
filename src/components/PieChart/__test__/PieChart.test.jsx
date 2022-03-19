@@ -2,8 +2,8 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { Provider } from "react-redux";
-import store from "../../../store/store";
 import PieChart from "../PieChart";
+import store from "../../../redux/store/store";
 
 describe("<PieChart/> component ", () => {
   it("check to be in the document", () => {

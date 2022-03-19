@@ -8,7 +8,7 @@ export const useGetData = (url) => {
   useEffect(() => {
     const fetchData = async () => {
       const users = await axios.get(url);
-      dispatch({ type: "init", payload: users.data });
+      dispatch({ type: "init", payload: { users: users.data } });
     };
     fetchData();
   }, [url, dispatch]);

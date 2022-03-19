@@ -8,7 +8,8 @@ import NewEmployee from "./components/NewEmployee/NewEmployee";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const modalHandler = () => setIsOpen(!isOpen);
+  const modalHandler = () => setIsOpen(prevState => !prevState);
+  
   return (
     <div className="app">
       <div className="container">
@@ -32,5 +33,3 @@ const App = () => {
 
 export default App;
 
-//  вынесты pieChart в отдельный файл ( компонент ) и вызвать ее в АПП
-//  тоже с barChart

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PieChart/> component  should match snapshot WHEN rendered 1`] = `
+<DocumentFragment>
+  <div
+    class="pie-chart chart"
+    data-testid="pieChart"
+  />
+</DocumentFragment>
+`;

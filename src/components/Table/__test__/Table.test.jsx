@@ -4,7 +4,7 @@ import { act } from "react-dom/test-utils";
 import "@testing-library/jest-dom";
 import Table from "../Table";
 import { Provider } from "react-redux";
-import store from "../../../store/store";
+import store from "../../../redux/store/store";
 
 describe(" <Table/> component", () => {
   it("check redux", async () => {

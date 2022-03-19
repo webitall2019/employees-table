@@ -3,9 +3,8 @@ import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { Provider } from "react-redux";
 import App from "./App";
-import store from "./store/store";
 import Modal from "./components/Modal/Modal";
-Modal;
+import store from "./redux/store/store";
 
 describe("<App/> component", () => {
   it("should match snapshot WHEN rendered", () => {

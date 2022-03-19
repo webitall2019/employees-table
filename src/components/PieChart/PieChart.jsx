@@ -7,16 +7,21 @@ import { useSelector } from "react-redux";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const PieChart = () => {
-  const users = useSelector((state) => state);
+  const users = useSelector((state) => state.users);
   const [devCount, setDevCount] = useState(0);
   const [qaCount, setQaCount] = useState(0);
-  const [filteredUsers, setFilteredUsers] = useState([]);
+  const [jobNames, setjobNames] = useState([])
 
-  const jobTitles = map(filteredUsers, (obj) => obj.jobTitle);
+  // const [filteredUsers, setFilteredUsers] = useState([]);
+
+  const jobTitles = map(users, (obj) => obj.jobTitle);
 
   useEffect(() => {
-    setFilteredUsers(users);
-    setDevCount(countBy(jobTitles).Developer);
+    // setFilteredUsers(users);
+    // setDevCount(countBy(jobTitles).Developer);
+    
+    setDevCount(jobTitles.filter((el) => el === "Developer").length);
+    
     setQaCount(countBy(jobTitles).QA);
   }, [users, jobTitles]);
 

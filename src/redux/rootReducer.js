@@ -3,7 +3,9 @@ export const rootReducer = (state = [], action) => {
     case "init":
       return (state = action.payload);
     case "newUser":
-      return [...state, action.payload];
+      let stateCopy = { ...state };
+      stateCopy.users.push(action.payload);
+      return stateCopy;
     default:
       break;
   }

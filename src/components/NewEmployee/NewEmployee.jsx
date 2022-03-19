@@ -8,6 +8,7 @@ const NewEmployee = () => {
   const [tenure, setAge] = useState("");
   const [jobTitle, setJob] = useState("CEO");
   const [gender, setGender] = useState("Male");
+  const [isDisabled, setIsDisabled] = useState(false);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -19,15 +20,16 @@ const NewEmployee = () => {
     });
   }, [name, tenure, jobTitle, gender]);
 
-  const submithandler = async (e) => {
+  const submitHandler = (e) => {
     e.preventDefault();
     dispatch({ type: "newUser", payload: newEmployee });
+    setIsDisabled(!isDisabled);
   };
 
   return (
     <div className="form__wrap">
       <h1>Become one of the team</h1>
-      <form onSubmit={submithandler}>
+      <form onSubmit={submitHandler}>
         <div className="form__group">
           <input
             data-testid="userName"
@@ -69,7 +71,9 @@ const NewEmployee = () => {
             <option value="Male">Male</option>
             <option value="Female">Female</option>
           </select>
-          <button type="submit">submit</button>
+          <button type="submit" disabled={isDisabled}>
+            submit
+          </button>
         </div>
       </form>
     </div>
