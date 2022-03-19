@@ -32,7 +32,6 @@ const NewEmployee = () => {
       <form onSubmit={submitHandler}>
         <div className="form__group">
           <input
-            data-testid="userName"
             required
             placeholder="your name"
             id="name"
@@ -42,7 +41,6 @@ const NewEmployee = () => {
             onChange={(e) => setName(e.target.value)}
           />
           <input
-            data-testid="userAge"
             required
             placeholder="your age"
             type="number"
@@ -51,7 +49,6 @@ const NewEmployee = () => {
             onChange={(e) => setAge(e.target.value)}
           />
           <select
-            data-testid="jobTitle"
             name="jobTitle"
             onChange={(e) => setJob(e.target.value)}
             required
@@ -63,7 +60,6 @@ const NewEmployee = () => {
             <option value="QA">QA</option>
           </select>
           <select
-            data-testid="gender"
             name="gender"
             onChange={(e) => setGender(e.target.value)}
             required

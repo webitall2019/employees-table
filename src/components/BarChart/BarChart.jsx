@@ -42,7 +42,7 @@ const BarChart = () => {
     ],
   };
   return (
-    <div className="bar-chart chart" data-testid="barChart">
+    <div className="bar-chart chart">
       <Bar options={options} data={data} />
     </div>
   );

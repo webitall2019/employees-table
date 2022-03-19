@@ -10,18 +10,11 @@ const PieChart = () => {
   const users = useSelector((state) => state.users);
   const [devCount, setDevCount] = useState(0);
   const [qaCount, setQaCount] = useState(0);
-  const [jobNames, setjobNames] = useState([])
-
-  // const [filteredUsers, setFilteredUsers] = useState([]);
 
   const jobTitles = map(users, (obj) => obj.jobTitle);
 
   useEffect(() => {
-    // setFilteredUsers(users);
-    // setDevCount(countBy(jobTitles).Developer);
-    
     setDevCount(jobTitles.filter((el) => el === "Developer").length);
-    
     setQaCount(countBy(jobTitles).QA);
   }, [users, jobTitles]);
 
@@ -44,7 +37,7 @@ const PieChart = () => {
   }, [devCount, qaCount]);
 
   return (
-    <div className="pie-chart chart" data-testid="pieChart">
+    <div className="pie-chart chart">
       <Pie data={dataChart} />
     </div>
   );

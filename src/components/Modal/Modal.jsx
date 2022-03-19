@@ -2,7 +2,7 @@ import React from "react";
 import "./modal.scss";
 
 const Modal = ({ children, modalHandler }) => (
-  <div className="modal" role="showModal" data-testid="modalTestId">
+  <div className="modal" >
     <button onClick={modalHandler} className="modal__btn--close">
       <span></span>
       <span></span>
